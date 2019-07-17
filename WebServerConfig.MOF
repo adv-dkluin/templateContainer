@@ -1,0 +1,12 @@
+Configuration WebServerConfig
+{
+
+    Node ("localhost") {
+
+        WindowsFeature WebServer {
+            Ensure = "Present"
+            Name   = "Web-Server"
+	    IncludeAllSubFeature = $true
+        }
+    }
+}
